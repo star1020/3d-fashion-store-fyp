@@ -1,0 +1,178 @@
+
+
+/* CHATBOX
+=============== */
+.chatbox {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+/* CONTENT IS CLOSE */
+.chatbox__support {
+    display: flex;
+    flex-direction: column;
+    background: #eee;
+    width: 300px;
+    height: 350px;
+    z-index: -123456;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all .5s ease-in-out;
+}
+
+/* CONTENT ISOPEN */
+.chatbox--active {
+    transform: translateY(-40px);
+    z-index: 123456;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* BUTTON */
+.chatbox__button {
+    text-align: right;
+}
+
+
+/* HEADER */
+.chatbox__header {
+    position: sticky;
+    top: 0;
+    background: orange;
+}
+
+/* MESSAGES */
+.chatbox__messages {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    pointer-events: auto;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.messages__item {
+    background: orange;
+    max-width: 60.6%;
+    width: fit-content;
+    overflow-wrap: break-word;
+}
+
+.messages__item img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* This will ensure that the image doesn't have extra space around it */
+}
+
+.messages__item--visitor {
+    margin-left: auto;
+}
+
+.messages__item--operator {
+    margin-right: auto;
+}
+
+/* FOOTER */
+.chatbox__footer {
+    position: sticky;
+    bottom: 0;
+    pointer-events: auto;
+
+}
+
+.messages__item--waiting {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 8px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.loader {
+    border: 4px solid #f3f3f3; /* Light grey border */
+    border-top: 4px solid #3498db; /* Blue border */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+    margin-right: 10px;
+}
+
+/* Animation for the loader */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.messages__staff-img {
+    width: 40px; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.personalized-suggestions {
+    background-color: #f1f1f1; /* Background color of the entire container */
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  .suggestions-heading {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333; /* Color of the heading text */
+  }
+  
+  .suggestions-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .suggestion-item {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease;
+  }
+  
+  .suggestion-item:hover {
+    transform: translateY(-2px); /* Slight raise effect on hover */
+  }
+  
+  .product-image {
+    width: 60px; /* Adjust the size as needed */
+    height: 60px; /* Adjust the size as needed */
+    border-radius: 8px;
+    margin-right: 10px;
+  }
+  
+  .product-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-name {
+    font-size: 0.9em; /* Adjust the size as needed */
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .product-price {
+    font-size: 0.9em; /* Adjust the size as needed */
+    color: #e44d3a; /* Color of the price text */
+    font-weight: bold;
+  }
+  
